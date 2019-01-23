@@ -4,12 +4,51 @@
   "type": "HERO_POWER",
   "heroClass": "WHITE",
   "rarity": "FREE",
-  "description": "Give a minion \"Deathrattle: Shuffle this into your deck\"",
-  "targetSelection": "MINIONS",
+  "description": "Passive: Whenever your hero attacks, Discover a Legendary minion and summon it.",
+  "targetSelection": "NONE",
   "spell": {
     "class": "HeroPowerSpell",
     "spell": {
-      "class": "custom.RafaamThiefSpell"
+      "class": "DiscoverSpell",
+      "spell": {
+        "class": "SummonSpell"
+      },
+      "cardSource": {
+        "class": "UnweightedCatalogueSource"
+      },
+      "cardFilter": {
+        "class": "CardFilter",
+        "cardType": "MINION",
+        "rarity": "LEGENDARY"
+      }
+    }
+  },
+  "condition": {
+    "class": "AndCondition",
+    "invert": true
+  },
+  "passiveTrigger": {
+    "eventTrigger": {
+      "class": "PhysicalAttackTrigger",
+      "sourceEntityType": "HERO",
+      "sourcePlayer": "SELF"
+    },
+    "spell": {
+      "class": "HeroPowerSpell",
+      "spell": {
+        "class": "DiscoverSpell",
+        "spell": {
+          "class": "SummonSpell"
+        },
+        "cardSource": {
+          "class": "UnweightedCatalogueSource"
+        },
+        "cardFilter": {
+          "class": "CardFilter",
+          "cardType": "MINION",
+          "rarity": "LEGENDARY"
+        }
+      }
     }
   },
   "collectible": false,

@@ -989,6 +989,7 @@ public class CustomCardsTests extends TestBase {
 
 
 	@Test
+	@Ignore
 	public void testRafaamSupremeThief() {
 		runGym((context, player, opponent) -> {
 			shuffleToDeck(context, player, "spell_the_coin");
