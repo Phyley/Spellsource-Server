@@ -148,6 +148,24 @@ services:
         - "traefik.enable=false"
     environment:
       - PARSOID_DOMAIN_mediawiki=http://mediawiki/api.php
+  backups:
+    image: "doctorpangloss/backups:latest"
+    environment:
+      - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
+      - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
+      - MONGO_HOST=mongo
+      - MYSQL_HOST=mariadb
+      - MYSQL_PORT=3306
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=password
+      - S3_REGION=us-west-2
+      - S3_BUCKET_NAME=hiddenswitch-private
+      - S3_BUCKET_PATH=spellsource/backups/
+    deploy:
+      labels:
+        - "traefik.enabled=false"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
   mariadb:
     image: mariadb:10.4.1
     deploy:

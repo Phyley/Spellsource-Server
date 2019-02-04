@@ -1,0 +1,12 @@
+[
+  {
+    "comment": "Backup MongoDB hourly to S3",
+    "schedule": "@hourly",
+    "command": "mongodb_backup.sh -b ${S3_BUCKET_NAME} -r ${S3_REGION} -k 0 -p ${S3_BUCKET_PATH} -n ${MONGO_HOST}"
+  },
+  {
+    "comment": "Backup MariaDB hourly to S3",
+    "schedule": "@hourly",
+    "command": "mariadb_backup.sh"
+  }
+]
