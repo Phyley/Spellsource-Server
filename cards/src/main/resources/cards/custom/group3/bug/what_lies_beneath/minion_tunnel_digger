@@ -7,7 +7,7 @@
   "baseHp": 6,
   "rarity": "COMMOn",
   "race": "BEAST",
-  "description": "At the end of your turn, add a random Artifact to your hand.",
+  "description": "At the end of your turn, receive a random Artifact.",
   "trigger": {
     "eventTrigger": {
       "class": "TurnEndTrigger",
