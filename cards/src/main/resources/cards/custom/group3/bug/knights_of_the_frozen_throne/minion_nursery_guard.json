@@ -3,18 +3,18 @@
   "baseManaCost": 2,
   "type": "MINION",
   "heroClass": "AMBER",
-  "baseAttack": 4,
+  "baseAttack": 3,
   "baseHp": 3,
   "rarity": "RARE",
   "race": "BEAST",
-  "description": "Guard. Aftermath: Transform the top card of your deck into a 0/2 Spidey Egg.",
-  "deathrattle": {
+  "description": "Guard. Opener: Transform the top card of your deck into a 0/2 Spidey Egg.",
+  "battlecry": {
     "class": "ReplaceCardsSpell",
     "target": "FRIENDLY_TOP_CARD",
     "card": "token_spidey_egg"
   },
   "attributes": {
-    "DEATHRATTLES": true,
+    "BATTLECRY": true,
     "TAUNT": true
   },
   "collectible": true,
