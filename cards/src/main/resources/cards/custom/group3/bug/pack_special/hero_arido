@@ -5,7 +5,7 @@
   "type": "HERO",
   "heroClass": "AMBER",
   "rarity": "LEGENDARY",
-  "description": "Opener: Fill your board with Serv-Ants with Guard.",
+  "description": "Opener: Fill your board with Serv-Ants.",
   "battlecry": {
     "targetSelection": "NONE",
     "spell": {
