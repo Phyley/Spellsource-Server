@@ -7,7 +7,7 @@
   "baseHp": 2,
   "rarity": "COMMON",
   "race": "BEAST",
-  "description": "Has +2 Attack while you control another Common minion.",
+  "description": "Guard. Has +2 Attack while you control another Common minion.",
   "trigger": {
     "eventTrigger": {
       "class": "BoardChangedTrigger"
@@ -29,6 +29,9 @@
         "ifTrue": 2
       }
     }
+  },
+  "attributes": {
+    "TAUNT": true
   },
   "collectible": true,
   "set": "CUSTOM",
